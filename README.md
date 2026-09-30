@@ -18,13 +18,13 @@
 
 | File | Purpose |
 |---|---|
-| `README.md` | Main MongoDB beginner notes and quick reference |
-| `diagrams/01-mongodb-ecosystem.mmd` | MongoDB / Atlas / Cluster / Database hierarchy |
-| `diagrams/02-mongodb-learning-path.mmd` | Beginner learning flow |
-| `diagrams/03-crud-flow.mmd` | CRUD operations flow |
-| `diagrams/04-query-toolkit.mmd` | Filtering, projection, operators, sorting and pagination |
-| `diagrams/05-aggregation-pipeline.mmd` | Aggregation and pipeline flow |
-| `diagrams/06-document-structure.mmd` | Document, nested document and array structure |
+| [README.md](README.md) | Main MongoDB beginner notes and quick reference |
+| [01-mongodb-ecosystem.mmd](diagrams/01-mongodb-ecosystem.mmd) | MongoDB / Atlas / Cluster / Database hierarchy |
+| [02-mongodb-learning-path.mmd](diagrams/02-mongodb-learning-path.mmd) | Beginner learning flow |
+| [03-crud-flow.mmd](diagrams/03-crud-flow.mmd) | CRUD operations flow |
+| [04-query-toolkit.mmd](diagrams/04-query-toolkit.mmd) | Filtering, projection, operators, sorting and pagination |
+| [05-aggregation-pipeline.mmd](diagrams/05-aggregation-pipeline.mmd) | Aggregation and pipeline flow |
+| [06-document-structure.mmd](diagrams/06-document-structure.mmd) | Document, nested document and array structure |
 
 > 💡 The `.mmd` files are standalone Mermaid diagrams. Open them with a Mermaid-compatible VS Code extension or Mermaid editor to view and zoom/pan the diagrams.
 
@@ -90,7 +90,7 @@ MongoDB
                       └── Field
 ```
 
-See: `diagrams/01-mongodb-ecosystem.mmd`
+See: [MongoDB ecosystem diagram](diagrams/01-mongodb-ecosystem.mmd)
 
 ---
 
@@ -209,7 +209,7 @@ db.product.deleteMany({})
 
 MongoDB documents use `_id` as their unique identifier. MongoDB can automatically generate it when you do not provide one.
 
-See: `diagrams/03-crud-flow.mmd`
+See: [CRUD flow diagram](diagrams/03-crud-flow.mmd)
 
 ---
 
@@ -490,7 +490,7 @@ db.playerMatchDetails.aggregate([
 4. Keep players with totalSixes > 5
 ```
 
-See: `diagrams/05-aggregation-pipeline.mmd`
+See: [aggregation pipeline diagram](diagrams/05-aggregation-pipeline.mmd)
 
 ---
 
@@ -532,7 +532,7 @@ product
        └── avgRating
 ```
 
-See: `diagrams/06-document-structure.mmd`
+See: [document structure diagram](diagrams/06-document-structure.mmd)
 
 ---
 
@@ -585,7 +585,7 @@ Used to match an array by its number of elements.
 
 The notes use `$elemMatch` when working with arrays containing nested objects and when multiple conditions need to apply to the same array element.
 
-See: `diagrams/06-document-structure.mmd`
+See: [document structure diagram](diagrams/06-document-structure.mmd)
 
 ---
 
@@ -623,7 +623,7 @@ Aggregation
 Aggregation pipelines
 ```
 
-See: `diagrams/02-mongodb-learning-path.mmd`
+See: [beginner learning path diagram](diagrams/02-mongodb-learning-path.mmd)
 
 ---
 
@@ -755,12 +755,12 @@ Open the `.mmd` files inside `diagrams/` with a Mermaid-compatible editor/extens
 
 | Diagram | What it teaches |
 |---|---|
-| `01-mongodb-ecosystem.mmd` | MongoDB ecosystem and hierarchy |
-| `02-mongodb-learning-path.mmd` | Beginner learning sequence |
-| `03-crud-flow.mmd` | Create → Read → Update → Delete |
-| `04-query-toolkit.mmd` | Filtering → Projection → Operators → Sort → Pagination |
-| `05-aggregation-pipeline.mmd` | `$match` → `$group` → next stages |
-| `06-document-structure.mmd` | Fields → nested documents → arrays → `$elemMatch` |
+| [01-mongodb-ecosystem.mmd](diagrams/01-mongodb-ecosystem.mmd) | MongoDB ecosystem and hierarchy |
+| [02-mongodb-learning-path.mmd](diagrams/02-mongodb-learning-path.mmd) | Beginner learning sequence |
+| [03-crud-flow.mmd](diagrams/03-crud-flow.mmd) | Create → Read → Update → Delete |
+| [04-query-toolkit.mmd](diagrams/04-query-toolkit.mmd) | Filtering → Projection → Operators → Sort → Pagination |
+| [05-aggregation-pipeline.mmd](diagrams/05-aggregation-pipeline.mmd) | `$match` → `$group` → next stages |
+| [06-document-structure.mmd](diagrams/06-document-structure.mmd) | Fields → nested documents → arrays → `$elemMatch` |
 
 ---
 
