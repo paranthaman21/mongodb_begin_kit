@@ -1,0 +1,21 @@
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Inter, Arial","primaryTextColor":"#F8FAFC","lineColor":"#94A3B8","textColor":"#F8FAFC","background":"#0F172A"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":65,"rankSpacing":75}}}%%
+flowchart TB
+    D["📄 MongoDB Document"]:::document
+    C["CREATE<br/>insertOne() / insertMany()"]:::create
+    R["READ<br/>find()"]:::read
+    U["UPDATE<br/>updateMany() + $set"]:::update
+    X["DELETE<br/>deleteMany()"]:::delete
+    ID["🔑 _id<br/>Unique Identifier"]:::id
+
+    D --> C --> R --> U --> X
+    D --> ID
+    R -. "query / filter" .-> D
+    U -. "changes document" .-> D
+    X -. "removes matching documents" .-> D
+
+    classDef document fill:#F59E0B,stroke:#B45309,color:#111827,stroke-width:3px;
+    classDef create fill:#16A34A,stroke:#15803D,color:#FFFFFF,stroke-width:2px;
+    classDef read fill:#2563EB,stroke:#1D4ED8,color:#FFFFFF,stroke-width:2px;
+    classDef update fill:#D97706,stroke:#B45309,color:#FFFFFF,stroke-width:2px;
+    classDef delete fill:#DC2626,stroke:#B91C1C,color:#FFFFFF,stroke-width:2px;
+    classDef id fill:#7C3AED,stroke:#5B21B6,color:#FFFFFF,stroke-width:2px;

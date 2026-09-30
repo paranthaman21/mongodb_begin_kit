@@ -1,0 +1,22 @@
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Inter, Arial","primaryTextColor":"#F8FAFC","lineColor":"#94A3B8","textColor":"#F8FAFC","background":"#0F172A"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":55,"rankSpacing":80}}}%%
+flowchart TB
+    Q["🔎 Query / find()"]:::root
+    F["Filtering<br/>field: value"]:::filter
+    O["Conditional Operators<br/>$eq • $gt • $gte • $lt • $lte"]:::operator
+    P["Projection<br/>1 = include • 0 = exclude"]:::projection
+    L["Logical Operators<br/>$and • $or • $not"]:::logic
+    S["Sorting<br/>1 = ASC • -1 = DESC"]:::sort
+    PG["Pagination<br/>skip() + limit()"]:::page
+    R["📄 Result Documents"]:::result
+
+    Q --> F --> O --> L --> S --> PG --> R
+    Q --> P --> R
+
+    classDef root fill:#47A248,stroke:#2F6B32,color:#FFFFFF,stroke-width:3px;
+    classDef filter fill:#2563EB,stroke:#1D4ED8,color:#FFFFFF,stroke-width:2px;
+    classDef operator fill:#EA580C,stroke:#C2410C,color:#FFFFFF,stroke-width:2px;
+    classDef projection fill:#7C3AED,stroke:#5B21B6,color:#FFFFFF,stroke-width:2px;
+    classDef logic fill:#DB2777,stroke:#9D174D,color:#FFFFFF,stroke-width:2px;
+    classDef sort fill:#0891B2,stroke:#0E7490,color:#FFFFFF,stroke-width:2px;
+    classDef page fill:#D97706,stroke:#B45309,color:#FFFFFF,stroke-width:2px;
+    classDef result fill:#16A34A,stroke:#15803D,color:#FFFFFF,stroke-width:3px;

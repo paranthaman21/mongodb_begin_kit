@@ -1,0 +1,19 @@
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Inter, Arial","primaryTextColor":"#F8FAFC","lineColor":"#94A3B8","textColor":"#F8FAFC","background":"#0F172A"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":70,"rankSpacing":90}}}%%
+flowchart LR
+    IN["📄 Input Documents"]:::input
+    M["$match<br/>Filter documents"]:::match
+    G["$group<br/>Group + calculate"]:::group
+    C["$sum / $avg<br/>$max / $min"]:::calc
+    N["Next Stage<br/>Optional $match / $sort / $skip / $limit"]:::next
+    OUT["📊 Final Result"]:::output
+
+    IN --> M --> G --> C --> N --> OUT
+    M -. "stage output becomes next stage input" .-> G
+    G -. "stage output" .-> N
+
+    classDef input fill:#64748B,stroke:#475569,color:#FFFFFF,stroke-width:2px;
+    classDef match fill:#2563EB,stroke:#1D4ED8,color:#FFFFFF,stroke-width:2px;
+    classDef group fill:#7C3AED,stroke:#5B21B6,color:#FFFFFF,stroke-width:2px;
+    classDef calc fill:#EA580C,stroke:#C2410C,color:#FFFFFF,stroke-width:2px;
+    classDef next fill:#DB2777,stroke:#9D174D,color:#FFFFFF,stroke-width:2px;
+    classDef output fill:#16A34A,stroke:#15803D,color:#FFFFFF,stroke-width:3px;

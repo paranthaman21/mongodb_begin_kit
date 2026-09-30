@@ -1,0 +1,28 @@
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Inter, Arial","primaryTextColor":"#F8FAFC","lineColor":"#94A3B8","textColor":"#F8FAFC","background":"#0F172A"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":60,"rankSpacing":80}}}%%
+flowchart TB
+    D["📄 Document"]:::document
+    F["Fields<br/>name • price • category"]:::field
+    N["🧩 Nested / Embedded Document"]:::nested
+    R["ratings"]:::nestedKey
+    AR["avgRating<br/>noOfUsersRated"]:::leaf
+    A["📦 Array Field"]:::array
+    V["Values<br/>red • blue • black"]:::leaf
+    AO["Array of Nested Objects"]:::arrayObj
+    E["$elemMatch<br/>Match conditions on an array element"]:::operator
+    DOT["Dot notation<br/>ratings.avgRating"]:::dot
+
+    D --> F
+    D --> N --> R --> AR
+    D --> A --> V
+    D --> AO --> E
+    N -. "access nested field" .-> DOT
+
+    classDef document fill:#F59E0B,stroke:#B45309,color:#111827,stroke-width:3px;
+    classDef field fill:#14B8A6,stroke:#0F766E,color:#FFFFFF,stroke-width:2px;
+    classDef nested fill:#7C3AED,stroke:#5B21B6,color:#FFFFFF,stroke-width:2px;
+    classDef nestedKey fill:#9333EA,stroke:#7E22CE,color:#FFFFFF,stroke-width:2px;
+    classDef leaf fill:#2563EB,stroke:#1D4ED8,color:#FFFFFF,stroke-width:2px;
+    classDef array fill:#DB2777,stroke:#9D174D,color:#FFFFFF,stroke-width:2px;
+    classDef arrayObj fill:#EA580C,stroke:#C2410C,color:#FFFFFF,stroke-width:2px;
+    classDef operator fill:#DC2626,stroke:#B91C1C,color:#FFFFFF,stroke-width:2px;
+    classDef dot fill:#16A34A,stroke:#15803D,color:#FFFFFF,stroke-width:2px;

@@ -1,0 +1,26 @@
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Inter, Arial","primaryTextColor":"#F8FAFC","lineColor":"#94A3B8","textColor":"#F8FAFC","background":"#0F172A"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":55,"rankSpacing":75}}}%%
+flowchart TB
+    M["🍃 MongoDB<br/>Database Technology"]:::mongo
+    A["☁️ MongoDB Atlas<br/>Cloud Service"]:::atlas
+    C["🖥️ MongoDB Cluster / Deployment"]:::cluster
+    D["🗄️ Database"]:::database
+    CO["📚 Collection"]:::collection
+    DO["📄 Document"]:::document
+    F["🔑 Fields<br/>name • price • category"]:::field
+    I["_id<br/>Unique Document Identifier"]:::id
+    S["⌨️ mongosh<br/>MongoDB Shell"]:::tool
+
+    M --> A --> C --> D --> CO --> DO
+    DO --> F
+    DO --> I
+    S -. "connect / query" .-> C
+
+    classDef mongo fill:#47A248,stroke:#2F6B32,color:#FFFFFF,stroke-width:3px;
+    classDef atlas fill:#00A35C,stroke:#007A45,color:#FFFFFF,stroke-width:2px;
+    classDef cluster fill:#2563EB,stroke:#1D4ED8,color:#FFFFFF,stroke-width:2px;
+    classDef database fill:#7C3AED,stroke:#5B21B6,color:#FFFFFF,stroke-width:2px;
+    classDef collection fill:#DB2777,stroke:#9D174D,color:#FFFFFF,stroke-width:2px;
+    classDef document fill:#F59E0B,stroke:#B45309,color:#111827,stroke-width:2px;
+    classDef field fill:#14B8A6,stroke:#0F766E,color:#FFFFFF,stroke-width:2px;
+    classDef id fill:#EF4444,stroke:#B91C1C,color:#FFFFFF,stroke-width:2px;
+    classDef tool fill:#64748B,stroke:#475569,color:#FFFFFF,stroke-width:2px;

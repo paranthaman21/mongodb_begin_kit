@@ -1,0 +1,24 @@
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Inter, Arial","primaryTextColor":"#F8FAFC","lineColor":"#94A3B8","textColor":"#F8FAFC","background":"#0F172A"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":45,"rankSpacing":60}}}%%
+flowchart LR
+    T["🌱 MongoDB Terms"]:::start --> S["🛠️ Atlas • Cluster • mongosh"]:::setup
+    S --> B["🗄️ Database • Collection • Document • Field"]:::structure
+    B --> C["🟢 CRUD"]:::crud
+    C --> F["🔎 Filtering"]:::query
+    F --> P["🎯 Projection"]:::query
+    P --> O["⚙️ Conditional Operators"]:::operator
+    O --> SO["↕️ Sorting"]:::query
+    SO --> PG["📄 Pagination"]:::query
+    PG --> L["🧠 Logical Operators"]:::operator
+    L --> N["🧩 Nested Documents"]:::complex
+    N --> AR["📦 Arrays"]:::complex
+    AR --> AG["📊 Aggregation"]:::aggregation
+    AG --> AP["🔗 Aggregation Pipeline"]:::aggregation
+
+    classDef start fill:#47A248,stroke:#2F6B32,color:#FFFFFF,stroke-width:3px;
+    classDef setup fill:#2563EB,stroke:#1D4ED8,color:#FFFFFF,stroke-width:2px;
+    classDef structure fill:#7C3AED,stroke:#5B21B6,color:#FFFFFF,stroke-width:2px;
+    classDef crud fill:#16A34A,stroke:#15803D,color:#FFFFFF,stroke-width:2px;
+    classDef query fill:#0891B2,stroke:#0E7490,color:#FFFFFF,stroke-width:2px;
+    classDef operator fill:#EA580C,stroke:#C2410C,color:#FFFFFF,stroke-width:2px;
+    classDef complex fill:#DB2777,stroke:#9D174D,color:#FFFFFF,stroke-width:2px;
+    classDef aggregation fill:#9333EA,stroke:#7E22CE,color:#FFFFFF,stroke-width:2px;
